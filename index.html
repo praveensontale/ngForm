@@ -3,10 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Index</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="node_modules/angular-ui-router-anim-in-out/css/anim-in-out.css">
+	
 	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-messages/angular-messages.min.js"></script>
+	<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+	
 	<script src="assets/js/app.js"></script>
+	<script src="assets/js/config.js"></script>
+	<script src="assets/js/controller/controller.js"></script>
+	<script src="assets/js/services/services.js"></script>
 </head>
 <body>
-	
+
+	<div ui-view class="anim-in-out anim-fade mainview" data-anim-sync="false" data-anim-speed="500"></div>
 </body>
 </html>

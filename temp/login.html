@@ -1,0 +1,36 @@
+<div class="mainview anim-fade">
+    <div class="container ">
+        <div class="row">
+            <form class="col-sm-4 col-sm-offset-4" name="loginform">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                    	<a ui-sref="register" class="pull-right">Not Registered?</a>
+                        <h1 class="panel-title">{{vm.pageTitle}}</h1>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group" ng-class="{'has-error': loginform.email.$touched && loginform.email.$invalid}">
+                            <lable class="control-label">
+                            	Email
+                                <input type="email" class="form-control" ng-model="vm.user.email" name="email" required="" ng-invalid>
+                                <div class="help-block" ng-messages="loginform.email.$error" ng-if="loginform.email.$touched && loginform.email.$invalid">
+                                	<p ng-message="required">Field is required</p>
+                                	<p ng-message="email">Please insert valid email</p>
+                                </div>
+                            </lable>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error': loginform.password.$touched  && loginform.password.$invalid}">
+                            <lable class="control-label">
+                            	Password
+                                <input type="password" class="form-control" ng-model="vm.user.password" name="password" required="">
+                                <div class="help-block" ng-messages="loginform.password.$error" ng-if="loginform.password.$touched">
+                                	<p ng-message="required">Field is required</p>
+                                </div>
+                            </lable>
+                        </div>
+                        <button class="btn btn-block btn-primary" ng-click="vm.submit();" ng-disabled="loginform.$invalid">Log in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,12 @@
-<div class="container">
-	<h1 class="text-center">Welcome to App</h1>
+<div class="mainview anim-fade">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h2>Welcome to user registration form</h2>
+            <p class="lead">Built in AngularJs</p>
+            <a ui-sref="login">Click here to start demo</a>
+            <hr>
+            <p>{{$state.home.data}}</p>
+            <p class="lead" ng-if="vm.isInReact">This is a registration form in <a href="javascript;void(0);">React</a></p>
+        </div>
+    </div>
 </div>
